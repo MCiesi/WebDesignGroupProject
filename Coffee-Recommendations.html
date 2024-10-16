@@ -1,10 +1,372 @@
-<!DOCTYPE html>
+<style><!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
 <meta name="description" content= “width=device-width, inital-scale=1.0”>
   <title>Must try Coffee in the Area</title>
+ 
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #6f4e37; /* Coffee-like color */
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Navigation Bar */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #fff;
+            color: #6f4e37;
+            border-radius: 5px;
+        }
+
+        /* Main Content Styling */
+        main {
+            padding: 20px 0;
+        }
+
+        /* Search Bar Styling */
+        .search-bar {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .search-bar input {
+            width: 60%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #6f4e37;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px 15px;
+            font-size: 1em;
+            background-color: #6f4e37;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+        }
+
+        .search-bar button:hover {
+            background-color: #5a3d2e;
+        }
+
+        /* Coffee Listing */
+        .coffee-listing {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .coffee-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 350px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .coffee-item:hover {
+            transform: scale(1.05);
+        }
+
+        .coffee-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .coffee-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .coffee-info {
+            padding: 15px;
+        }
+
+        .coffee-info h2 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: #6f4e37;
+        }
+
+        .coffee-info h3 {
+            font-size: 1.2em;
+            color: #8d6e63;
+            margin-bottom: 10px;
+        }
+
+        .coffee-info p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            margin-bottom: 15px;
+        }
+
+        .rating span {
+            font-size: 1.2em;
+            color: #FFD700; /* Gold color for stars */
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #6f4e37;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #5a3d2e;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #ffdd57;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .coffee-listing {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .coffee-item {
+                max-width: 90%;
+            }
+
+            .search-bar input {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Must-Try Coffees in [Your Area]</h1>
+            <p>Discover the best coffee spots near you!</p>
+            <!-- Navigation Bar -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="must-try-coffees.html" class="active">Must-Try Coffees</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="container">
+            <!-- Search Bar -->
+            <section class="search-bar">
+                <input type="text" id="search" placeholder="Search for a coffee...">
+                <button onclick="searchCoffee()">Search</button>
+            </section>
+
+            <!-- Coffee Listing -->
+            <section class="coffee-listing">
+                <!-- Coffee Item 1 -->
+                <article class="coffee-item">
+                    <img src="images/coffee1.jpg" alt="Cafe Latte at The Coffee House">
+                    <div class="coffee-info">
+                        <h2>The Coffee House</h2>
+                        <h3>Cafe Latte</h3>
+                        <p>A smooth and creamy latte made with locally roasted beans.</p>
+                        <div class="rating">
+                            <span>⭐️⭐️⭐️⭐️☆</span> <!-- 4 out of 5 stars -->
+                        </div>
+                        <a href="https://www.thecoffeehouse.com" target="_blank" class="btn">Visit Website</a>
+                    </div>
+                </article>
+
+                <!-- Coffee Item 2 -->
+                <article class="coffee-item">
+                    <img src="images/coffee2.jpg" alt="Espresso at Java Junction">
+                    <div class="coffee-info">
+                        <h2>Java Junction</h2>
+                        <h3>Classic Espresso</h3>
+                        <p>Rich and bold espresso that hits the spot every time.</p>
+                        <div class="rating">
+                            <span>⭐️⭐️⭐️⭐️⭐️</span> <!-- 5 out of 5 stars -->
+                        </div>
+                        <a href="https://www.javajunction.com" target="_blank" class="btn">Visit Website</a>
+                    </div>
+                </article>
+
+                <!-- Coffee Item 3 -->
+                <article class="coffee-item">
+                    <img src="images/coffee3.jpg" alt="Flat White at Urban Grind">
+                    <div class="coffee-info">
+                        <h2>Urban Grind</h2>
+                        <h3>Flat White</h3>
+                        <p>Velvety smooth flat white with a perfect balance of espresso and steamed milk.</p>
+                        <div class="rating">
+                            <span>⭐️⭐️⭐️⭐️☆</span> <!-- 4 out of 5 stars -->
+                        </div>
+                        <a href="https://www.urbangrind.com" target="_blank" class="btn">Visit Website</a>
+                    </div>
+                </article>
+
+                <!-- Add more coffee items as needed -->
+                <!-- Example of Coffee Item 4 -->
+                <article class="coffee-item">
+                    <img src="images/coffee4.jpg" alt="Mocha at Bean Bistro">
+                    <div class="coffee-info">
+                        <h2>Bean Bistro</h2>
+                        <h3>Mocha</h3>
+                        <p>Chocolate-infused mocha that's both sweet and rich.</p>
+                        <div class="rating">
+                            <span>⭐️⭐️⭐️⭐️⭐️</span> <!-- 5 out of 5 stars -->
+                        </div>
+                        <a href="https://www.beanbistro.com" target="_blank" class="btn">Visit Website</a>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Must-Try Coffees. All rights reserved.</p>
+            <p>Follow us on 
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>, 
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>, 
+                and 
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Search Functionality -->
+    <script>
+        function searchCoffee() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const coffeeItems = document.querySelectorAll('.coffee-item');
+
+            coffeeItems.forEach(item => {
+                const name = item.querySelector('h2').textContent.toLowerCase();
+                const type = item.querySelector('h3').textContent.toLowerCase();
+                if (name.includes(input) || type.includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Optional: Allow search on Enter key press
+        document.getElementById('search').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                searchCoffee();
+            }
+        });
+    </script>
+</body>
+</html>
+</style>
 </head>
 
 <body>
