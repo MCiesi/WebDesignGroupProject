@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #6b4f4f;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #6b4f4f;
+    color: white;
+    padding: 10px 0;
+}
+hr{
+    color:#f4f4f4 ;
+    size: 10px;
+}
+section {
+    margin: 20px auto;
+    max-width: 800px;
+}
+img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.shop {
+    margin-bottom: 30px;
+}
